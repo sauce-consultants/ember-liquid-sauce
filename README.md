@@ -14,7 +14,7 @@ ember install ember-liquid-sauce
 
 ## Usage
 
-[Define a liquid-fire transition](https://ef4.github.io/liquid-fire/#/transition-map) using any of the four named reveal transitions:
+[Define a liquid-fire transition](https://ef4.github.io/liquid-fire/#/transition-map) using any of the eight named reveal transitions:
 
 ```javascript
 // app/transitions.js
