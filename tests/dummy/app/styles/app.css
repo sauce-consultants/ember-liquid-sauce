@@ -1,8 +1,10 @@
-
 html,
-body,
-body > .ember-view {
+body{
   height:100%;
+  position: relative;
+}
+body > .ember-view  {
+  min-height:100vh;
   position: relative;
 }
 
@@ -10,21 +12,16 @@ body {
   font-family: sans-serif;
 }
 
-body > .ember-view {
-  /* display: flex;
-  flex-direction: column; */
-}
-
 .base-outlet,
 .base-outlet > .liquid-child {
-  height:100%;
+  min-height:100vh;
 }
 
 .page {
   /* background-color: #8e8e93; */
   flex:1 1 auto;
   padding:50px;
-  min-height:calc(100% - 100px);
+  min-height:calc(100vh - 100px);
 }
 
 .page--a {
@@ -45,7 +42,12 @@ h1 {
   font-size: 30px;
   font-weight: 700;
   line-height: 40px;
-  margin: 0 0 60px;
+  margin: 0 0 10px;
+}
+p {
+  font-size: 18px;
+  line-height: 25px;
+  margin: 25px 0;
 }
 a {
   color:#111;
@@ -61,4 +63,14 @@ a:hover {
 .spacer {
   height:25px;
   min-width: 200px;
+}
+
+pre {
+  background: rgba(0,0,0,0.025);
+  border:1px solid #DDD;
+  font-family: Consolas,monospace;
+  font-size: 14px;
+  line-height: 25px;
+  padding:0 25px;
+  margin:25px 0;
 }
