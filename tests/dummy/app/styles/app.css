@@ -1,0 +1,64 @@
+
+html,
+body,
+body > .ember-view {
+  height:100%;
+  position: relative;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+body > .ember-view {
+  /* display: flex;
+  flex-direction: column; */
+}
+
+.base-outlet,
+.base-outlet > .liquid-child {
+  height:100%;
+}
+
+.page {
+  /* background-color: #8e8e93; */
+  flex:1 1 auto;
+  padding:50px;
+  min-height:calc(100% - 100px);
+}
+
+.page--a {
+  background-color: #ff2750;
+}
+.page--b {
+  background-color: #ff3925;
+}
+.page--c {
+  background-color: #ff9500;
+}
+.page--d {
+  background-color: #ffcd00;
+}
+
+h1 {
+  color:#111;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 40px;
+  margin: 0 0 60px;
+}
+a {
+  color:#111;
+  display: block;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  min-width: 200px;
+}
+a:hover {
+  color:#666;
+}
+.spacer {
+  height:25px;
+  min-width: 200px;
+}

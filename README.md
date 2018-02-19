@@ -1,26 +1,54 @@
 # ember-liquid-sauce
 
-This README outlines the details of collaborating on this Ember addon.
+This addon defines eight new ember liquid fire transitions for card interfaces.
+
+overUp, overDown, overLeft, overRight, revealUp, revealDown, revealLeft and revealRight.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
-* `cd ember-liquid-sauce`
-* `npm install`
+In your ember-cli project, run:
 
-## Running
+```bash
+ember install ember-liquid-sauce
+```
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+## Usage
 
-## Running Tests
+[Define a liquid-fire transition](https://ef4.github.io/liquid-fire/#/transition-map) using any of the four named reveal transitions:
 
-* `npm test` (Runs `ember try:each` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
+```javascript
+// app/transitions.js
+this.transition(
+  this.fromRoute('foo'),
+  this.toRoute('bar'),
+  this.use('overUp', {
+    shadow: true
+  }),
+  this.reverse('revealDown', {
+    shadow: true
+  })
+);
+```
 
-## Building
+Optionally, you can use `{ shadow: true }` as an option to add in a box shadow on the animating content and account for it in the sizing.
 
-* `ember build`
+### Over Transitions
 
-For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
+The old content will remain stationary as new content slides over in the direction specified.
+
+### Reveal Transitions
+
+The old content will slide away in the direction specified, revealing the new content in its place.
+
+**Note:** You'll probably want to make sure that the content being transitioned away from has a background that will mask the new content during the transition.
+
+## Developing
+
+- `git clone https://github.com/sauce-consultants/ember-liquid-sauce.git` this repository
+- `cd ember-liquid-sauce`
+- `npm install`
+
+## Running the Demo
+
+- `yarn serve`
+- Visit the demo app at <http://localhost:4200>.
